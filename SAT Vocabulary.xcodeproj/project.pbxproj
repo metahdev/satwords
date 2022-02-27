@@ -1,0 +1,480 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B0B789B127CAC0FE0098B691 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B789B027CAC0FE0098B691 /* AppDelegate.swift */; };
+		B0B789B327CAC0FE0098B691 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B789B227CAC0FE0098B691 /* SceneDelegate.swift */; };
+		B0B789B527CAC0FE0098B691 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B789B427CAC0FE0098B691 /* MainViewController.swift */; };
+		B0B789B827CAC0FE0098B691 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0B789B627CAC0FE0098B691 /* Main.storyboard */; };
+		B0B789BA27CAC1010098B691 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0B789B927CAC1010098B691 /* Assets.xcassets */; };
+		B0B789BD27CAC1010098B691 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0B789BB27CAC1010098B691 /* LaunchScreen.storyboard */; };
+		B0B789CD27CAC87A0098B691 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B789CC27CAC87A0098B691 /* Storage.swift */; };
+		B0B789CF27CACAFE0098B691 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B789CE27CACAFD0098B691 /* Extensions.swift */; };
+		B0B789D127CACCD40098B691 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B789D027CACCD40098B691 /* Service.swift */; };
+		B0B789D327CAD15A0098B691 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B789D227CAD15A0098B691 /* Constants.swift */; };
+		B0B789D527CADD250098B691 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B789D427CADD250098B691 /* AddViewController.swift */; };
+		B5F4B59CC800DEEFB05F925A /* Pods_SAT_Vocabulary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4AE349292034D7A7BC66AF5 /* Pods_SAT_Vocabulary.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5190F75223D7E46CD1C32B14 /* Pods-SAT Vocabulary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SAT Vocabulary.debug.xcconfig"; path = "Target Support Files/Pods-SAT Vocabulary/Pods-SAT Vocabulary.debug.xcconfig"; sourceTree = "<group>"; };
+		95DEED3F9674454001D568C8 /* Pods-SAT Vocabulary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SAT Vocabulary.release.xcconfig"; path = "Target Support Files/Pods-SAT Vocabulary/Pods-SAT Vocabulary.release.xcconfig"; sourceTree = "<group>"; };
+		B0B789AD27CAC0FE0098B691 /* SAT Vocabulary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SAT Vocabulary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0B789B027CAC0FE0098B691 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B0B789B227CAC0FE0098B691 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B0B789B427CAC0FE0098B691 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B0B789B727CAC0FE0098B691 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B0B789B927CAC1010098B691 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B0B789BC27CAC1010098B691 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B0B789BE27CAC1010098B691 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0B789CC27CAC87A0098B691 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		B0B789CE27CACAFD0098B691 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B0B789D027CACCD40098B691 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		B0B789D227CAD15A0098B691 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B0B789D427CADD250098B691 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		F4AE349292034D7A7BC66AF5 /* Pods_SAT_Vocabulary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SAT_Vocabulary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B0B789AA27CAC0FE0098B691 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5F4B59CC800DEEFB05F925A /* Pods_SAT_Vocabulary.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6A7AF1BEDAB25B05E3CEAB6F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5190F75223D7E46CD1C32B14 /* Pods-SAT Vocabulary.debug.xcconfig */,
+				95DEED3F9674454001D568C8 /* Pods-SAT Vocabulary.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B0B789A427CAC0FD0098B691 = {
+			isa = PBXGroup;
+			children = (
+				B0B789AF27CAC0FE0098B691 /* SAT Vocabulary */,
+				B0B789AE27CAC0FE0098B691 /* Products */,
+				6A7AF1BEDAB25B05E3CEAB6F /* Pods */,
+				CA0FAF6E1F2A0DE2005DC728 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B0B789AE27CAC0FE0098B691 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B0B789AD27CAC0FE0098B691 /* SAT Vocabulary.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B0B789AF27CAC0FE0098B691 /* SAT Vocabulary */ = {
+			isa = PBXGroup;
+			children = (
+				B0B789BE27CAC1010098B691 /* Info.plist */,
+				B0B789C827CAC68A0098B691 /* Storyboards */,
+				B0B789C727CAC6790098B691 /* Source */,
+				B0B789C927CAC69A0098B691 /* Resources */,
+			);
+			path = "SAT Vocabulary";
+			sourceTree = "<group>";
+		};
+		B0B789C727CAC6790098B691 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				B0B789B027CAC0FE0098B691 /* AppDelegate.swift */,
+				B0B789B227CAC0FE0098B691 /* SceneDelegate.swift */,
+				B0B789B427CAC0FE0098B691 /* MainViewController.swift */,
+				B0B789D427CADD250098B691 /* AddViewController.swift */,
+				B0B789CC27CAC87A0098B691 /* Storage.swift */,
+				B0B789D027CACCD40098B691 /* Service.swift */,
+				B0B789D227CAD15A0098B691 /* Constants.swift */,
+				B0B789CE27CACAFD0098B691 /* Extensions.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		B0B789C827CAC68A0098B691 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B0B789B627CAC0FE0098B691 /* Main.storyboard */,
+				B0B789BB27CAC1010098B691 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B0B789C927CAC69A0098B691 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B0B789B927CAC1010098B691 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CA0FAF6E1F2A0DE2005DC728 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4AE349292034D7A7BC66AF5 /* Pods_SAT_Vocabulary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B0B789AC27CAC0FE0098B691 /* SAT Vocabulary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0B789C127CAC1010098B691 /* Build configuration list for PBXNativeTarget "SAT Vocabulary" */;
+			buildPhases = (
+				114DF980C1A2492B94AFB846 /* [CP] Check Pods Manifest.lock */,
+				B0B789A927CAC0FE0098B691 /* Sources */,
+				B0B789AA27CAC0FE0098B691 /* Frameworks */,
+				B0B789AB27CAC0FE0098B691 /* Resources */,
+				73D55A311B65ED4B4CE49FD7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SAT Vocabulary";
+			productName = "SAT Vocabulary";
+			productReference = B0B789AD27CAC0FE0098B691 /* SAT Vocabulary.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B0B789A527CAC0FD0098B691 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					B0B789AC27CAC0FE0098B691 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = B0B789A827CAC0FD0098B691 /* Build configuration list for PBXProject "SAT Vocabulary" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B0B789A427CAC0FD0098B691;
+			productRefGroup = B0B789AE27CAC0FE0098B691 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B0B789AC27CAC0FE0098B691 /* SAT Vocabulary */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B0B789AB27CAC0FE0098B691 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0B789BD27CAC1010098B691 /* LaunchScreen.storyboard in Resources */,
+				B0B789BA27CAC1010098B691 /* Assets.xcassets in Resources */,
+				B0B789B827CAC0FE0098B691 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		114DF980C1A2492B94AFB846 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SAT Vocabulary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73D55A311B65ED4B4CE49FD7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SAT Vocabulary/Pods-SAT Vocabulary-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SAT Vocabulary/Pods-SAT Vocabulary-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SAT Vocabulary/Pods-SAT Vocabulary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B0B789A927CAC0FE0098B691 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0B789CF27CACAFE0098B691 /* Extensions.swift in Sources */,
+				B0B789B527CAC0FE0098B691 /* MainViewController.swift in Sources */,
+				B0B789D527CADD250098B691 /* AddViewController.swift in Sources */,
+				B0B789B127CAC0FE0098B691 /* AppDelegate.swift in Sources */,
+				B0B789B327CAC0FE0098B691 /* SceneDelegate.swift in Sources */,
+				B0B789D327CAD15A0098B691 /* Constants.swift in Sources */,
+				B0B789CD27CAC87A0098B691 /* Storage.swift in Sources */,
+				B0B789D127CACCD40098B691 /* Service.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B0B789B627CAC0FE0098B691 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0B789B727CAC0FE0098B691 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B0B789BB27CAC1010098B691 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0B789BC27CAC1010098B691 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B0B789BF27CAC1010098B691 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B0B789C027CAC1010098B691 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B0B789C227CAC1010098B691 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5190F75223D7E46CD1C32B14 /* Pods-SAT Vocabulary.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UCRS3R4AUU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SAT Vocabulary/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.metahdev.SAT-Vocabulary";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B0B789C327CAC1010098B691 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95DEED3F9674454001D568C8 /* Pods-SAT Vocabulary.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UCRS3R4AUU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SAT Vocabulary/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.metahdev.SAT-Vocabulary";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B0B789A827CAC0FD0098B691 /* Build configuration list for PBXProject "SAT Vocabulary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0B789BF27CAC1010098B691 /* Debug */,
+				B0B789C027CAC1010098B691 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0B789C127CAC1010098B691 /* Build configuration list for PBXNativeTarget "SAT Vocabulary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0B789C227CAC1010098B691 /* Debug */,
+				B0B789C327CAC1010098B691 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B0B789A527CAC0FD0098B691 /* Project object */;
+}
