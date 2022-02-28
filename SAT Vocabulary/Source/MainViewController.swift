@@ -9,7 +9,7 @@ import UIKit
 
 enum State {
     case ask
-    case wrong
+    case answering
 }
 
 class MainViewController: UIViewController {
@@ -18,7 +18,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var wordAskLabel: UILabel!
     @IBOutlet weak var userInputTF: UITextField!
-    @IBOutlet weak var wordRevealLabel: UILabel!
+    @IBOutlet weak var nameRevealLabel: UILabel!
     @IBOutlet weak var definitionRevealLabel: UILabel!
     @IBOutlet weak var exampleLabel: UILabel!
     @IBOutlet weak var wordIV: UIImageView!
@@ -46,6 +46,9 @@ class MainViewController: UIViewController {
         super.viewWillAppear(animated)
         retrieveData()
         updateData()
+        if !nextButton.isEnabled {
+            nextButton.isEnabled = words.count != 0
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -64,11 +67,13 @@ class MainViewController: UIViewController {
     }
     
     private func setupAppearance() {
-        backgroundView.layer.shadowOffset = CGSize(width: 10, height: 10)
-        backgroundView.layer.shadowRadius = 5
+        backgroundView.layer.shadowOffset = .zero
+        backgroundView.layer.shadowRadius = 10
         backgroundView.layer.shadowOpacity = 0.3
-        wordIV.layer.borderWidth = 1
-        wordIV.layer.borderColor = UIColor.lightGray.cgColor
+        backgroundView.layer.shadowPath = UIBezierPath(rect: backgroundView.bounds).cgPath
+        wordIV.layer.shadowOffset = CGSize(width: 10, height: 10)
+        wordIV.layer.shadowRadius = 2
+        wordIV.layer.shadowOpacity = 0.3
     }
     
     private func retrieveData() {
@@ -87,29 +92,42 @@ class MainViewController: UIViewController {
             self.userWords += userWordsData
         }
         
-        let fetchedUserDefinitionsData = UserDefaults.standard.value(forKey: Constants.userWordsID) as? [String]
+        let fetchedUserDefinitionsData = UserDefaults.standard.value(forKey: Constants.userDefinitionsID) as? [String]
         if let userDefinitionsData = fetchedUserDefinitionsData {
             self.userDefinitions += userDefinitionsData
         }
+        
+        self.words += userWords
+        self.definitions += userDefinitions
     }
     
     private func modificateArrays() {
-        var i = 0
         for word in self.memorizedWords {
             if self.memorizedWords.contains(word) {
-                self.words.remove(at: i)
-                self.definitions.remove(at: i)
+                let i = self.words.firstIndex(of: word)
+                if i != nil {
+                    self.words.remove(at: i!)
+                    self.definitions.remove(at: i!)
+                }
             }
-            i += 1
         }
     }
     
     private func updateData() {
         index += 1
+        guard self.words.count != 0 else {
+            wordAskLabel.text = "Finished all. Congrats!"
+            nextButton.isEnabled = false 
+            return
+        }
         word = words[index]
         wordAskLabel.text = word
-        definitionRevealLabel.text = definitions[index]
+        nameRevealLabel.text = definitions[index]
 
+        wordIV.image = nil
+        definitionRevealLabel.text = ""
+        exampleLabel.text = ""
+        
         Service.getDefinitionAndSentence(of: word)
         Service.getImageURLString(of: word)
         
@@ -124,27 +142,31 @@ class MainViewController: UIViewController {
     
     @IBAction private func nextWord(_ sender: Any) {
         if state == .ask {
-            state = .wrong
-            if Storage.definitions[index] == userInputTF.text {
-                self.memorizedWords.append(word)
-                UserDefaults.standard.removeObject(forKey: Constants.memorizedWordsID)
-                UserDefaults.standard.set(self.memorizedWords, forKey: Constants.memorizedWordsID)
-                self.updateData()
-            } else {
+            state = .answering
+            if definitions[index] == userInputTF.text {
                 if userWords.contains(word) {
                     let i = userWords.firstIndex(of: word)
                     userWords.remove(at: i!)
                     userDefinitions.remove(at: i!)
+                    UserDefaults.standard.removeObject(forKey: Constants.userWordsID)
+                    UserDefaults.standard.set(self.userWords, forKey: Constants.userWordsID)
+                    UserDefaults.standard.removeObject(forKey: Constants.userDefinitionsID)
+                    UserDefaults.standard.set(self.userDefinitions, forKey: Constants.userDefinitionsID)
+                } else {
+                    self.memorizedWords.append(word)
                     UserDefaults.standard.removeObject(forKey: Constants.memorizedWordsID)
                     UserDefaults.standard.set(self.memorizedWords, forKey: Constants.memorizedWordsID)
                 }
+                retrieveData()
+            } else {
                 toggleState(hide: true)
             }
         } else {
-            toggleState(hide: false)
-            updateData()
             state = .ask
+            toggleState(hide: false)
+            checkAmount()
         }
+        userInputTF.text = ""
         userInputTF.resignFirstResponder()
     }
     
@@ -154,10 +176,14 @@ class MainViewController: UIViewController {
         wordAskLabel.isHidden = hide
         backgroundView.isHidden = hide
         userInputTF.isHidden = hide
-        wordRevealLabel.isHidden = !hide
         definitionRevealLabel.isHidden = !hide
+        nameRevealLabel.isHidden = !hide
         exampleLabel.isHidden = !hide
         wordIV.isHidden = !hide
+    }
+    
+    private func checkAmount() {
+        nextButton.isEnabled = index + 1 != words.count
     }
     
     
@@ -165,7 +191,7 @@ class MainViewController: UIViewController {
     @objc private func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height / 2
+                self.view.frame.origin.y -= keyboardSize.height 
             }
         }
     }
@@ -181,7 +207,7 @@ class MainViewController: UIViewController {
 extension MainViewController: ServiceDelegate {
     func definitionAndSentenceLoaded(definition: String, example: String) {
         DispatchQueue.main.async() { [weak self] in
-            self?.wordRevealLabel.text = definition
+            self?.definitionRevealLabel.text = definition
             self?.exampleLabel.text = example
         }
     }

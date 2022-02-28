@@ -44,8 +44,20 @@ class AddViewController: UIViewController {
     }
     
     @IBAction private func doneIsPressed(_ sender: Any) {
-        Storage.words.append((wordTF.text ?? "").lowercased())
-        Storage.definitions.append((definitionTF.text ?? "").lowercased())
+        var userWords = [String]()
+        var userDefinitions = [String]()
+        
+        userWords = UserDefaults.standard.value(forKey: Constants.userWordsID) as? [String] ?? []
+        userDefinitions = UserDefaults.standard.value(forKey: Constants.userDefinitionsID) as? [String] ?? []
+        
+        userWords.append((wordTF.text ?? "").lowercased())
+        userDefinitions.append((definitionTF.text ?? "").lowercased())
+        
+        UserDefaults.standard.removeObject(forKey: Constants.userWordsID)
+        UserDefaults.standard.removeObject(forKey: Constants.userDefinitionsID)
+
+        UserDefaults.standard.setValue(userWords, forKey: Constants.userWordsID)
+        UserDefaults.standard.setValue(userDefinitions, forKey: Constants.userDefinitionsID)
         
         self.closeView(self)
     }

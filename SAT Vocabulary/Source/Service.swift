@@ -39,7 +39,7 @@ struct Service {
             "x-rapidapi-key": "6e8c93b65bmshe18c589743b173fp1a1a40jsn1094a7bb1ee6"
         ]
         
-        let request = NSMutableURLRequest(url: NSURL(string: "https://bing-image-search1.p.rapidapi.com/images/search?q=" + name)! as URL,
+        let request = NSMutableURLRequest(url: NSURL(string: "https://bing-image-search1.p.rapidapi.com/images/search?q=" + name.replacingOccurrences(of: " ", with: ""))! as URL,
                                           cachePolicy: .useProtocolCachePolicy,
                                           timeoutInterval: 10.0)
         request.httpMethod = "GET"

@@ -9,11 +9,7 @@ import UIKit
 import SwiftyJSON
 
 extension UIImageView {
-//    self?.image = UIImage(data: json!["value"][0]["thumbnailUrl"].string)
-
-    
     func download(from link: String) {
-        
         guard let url = URL(string: link) else { return }
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard

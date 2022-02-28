@@ -45,13 +45,13 @@
                                     <constraint firstAttribute="width" secondItem="A0H-mK-FJJ" secondAttribute="height" multiplier="1:1" id="Gnz-RE-vhA"/>
                                 </constraints>
                             </imageView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntn-AJ-L57">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="ntn-AJ-L57">
                                 <rect key="frame" x="20" y="465" width="374" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example sentence:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nou-w4-bTe">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example sentence:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="nou-w4-bTe">
                                 <rect key="frame" x="20" y="521" width="374" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -63,7 +63,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3v-SD-gP4">
-                                <rect key="frame" x="165.5" y="671" width="83" height="47.5"/>
+                                <rect key="frame" x="165.5" y="736" width="83" height="47.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="t3v-SD-gP4" secondAttribute="height" multiplier="54:31" id="GOG-WV-7mp"/>
                                 </constraints>
@@ -73,7 +73,7 @@
                                     <action selector="nextWord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cyt-1K-SdI"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQ9-gd-EVp">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="CQ9-gd-EVp">
                                 <rect key="frame" x="20" y="572.5" width="374" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -83,7 +83,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="t3v-SD-gP4" secondAttribute="bottom" multiplier="1.2" id="0Bk-et-5fM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="t3v-SD-gP4" secondAttribute="bottom" multiplier="1.1" id="0Bk-et-5fM"/>
                             <constraint firstItem="CQ9-gd-EVp" firstAttribute="top" secondItem="nou-w4-bTe" secondAttribute="bottom" constant="32" id="32j-YE-r7W"/>
                             <constraint firstItem="A0H-mK-FJJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5f4-nV-LNZ"/>
                             <constraint firstItem="nou-w4-bTe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9tB-Ao-oyj"/>
@@ -114,13 +114,13 @@
                     </view>
                     <connections>
                         <outlet property="backgroundView" destination="LyL-EZ-JG3" id="6gm-ao-l6F"/>
-                        <outlet property="definitionRevealLabel" destination="nou-w4-bTe" id="Swc-gC-eht"/>
+                        <outlet property="definitionRevealLabel" destination="nou-w4-bTe" id="SX0-5s-NCI"/>
                         <outlet property="exampleLabel" destination="CQ9-gd-EVp" id="0kT-wU-8Xe"/>
+                        <outlet property="nameRevealLabel" destination="ntn-AJ-L57" id="eom-4e-kCa"/>
                         <outlet property="nextButton" destination="t3v-SD-gP4" id="jZH-ya-IX2"/>
                         <outlet property="userInputTF" destination="nQC-sU-I0D" id="96G-v7-w6p"/>
                         <outlet property="wordAskLabel" destination="ASM-Cg-38x" id="pW7-00-h7c"/>
                         <outlet property="wordIV" destination="A0H-mK-FJJ" id="eXF-CR-cig"/>
-                        <outlet property="wordRevealLabel" destination="ntn-AJ-L57" id="a3E-IJ-2WY"/>
                         <segue destination="OB7-T6-G06" kind="show" identifier="showSegueID" id="cAf-ie-gsG"/>
                     </connections>
                 </viewController>

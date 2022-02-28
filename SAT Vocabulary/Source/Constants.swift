@@ -10,4 +10,5 @@ import Foundation
 struct Constants {
     static var memorizedWordsID = "memorizedWords"
     static var userWordsID = "userWords"
+    static var userDefinitionsID = "userDefinitions"
 }
