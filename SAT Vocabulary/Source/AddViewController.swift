@@ -20,6 +20,14 @@ class AddViewController: UIViewController {
         super.viewDidLoad()
         wordTF.delegate = self
         definitionTF.delegate = self
+        wordTF.attributedPlaceholder = NSAttributedString(
+            string: "Word",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
+        )
+        definitionTF.attributedPlaceholder = NSAttributedString(
+            string: "Definition",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
+        )
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -50,8 +58,8 @@ class AddViewController: UIViewController {
         userWords = UserDefaults.standard.value(forKey: Constants.userWordsID) as? [String] ?? []
         userDefinitions = UserDefaults.standard.value(forKey: Constants.userDefinitionsID) as? [String] ?? []
         
-        userWords.append((wordTF.text ?? "").lowercased())
-        userDefinitions.append((definitionTF.text ?? "").lowercased())
+        userWords.append((wordTF.text ?? "none").lowercased())
+        userDefinitions.append((definitionTF.text ?? "none").lowercased())
         
         UserDefaults.standard.removeObject(forKey: Constants.userWordsID)
         UserDefaults.standard.removeObject(forKey: Constants.userDefinitionsID)

@@ -89,12 +89,12 @@ class MainViewController: UIViewController {
         
         let fetchedUserWordsData = UserDefaults.standard.value(forKey: Constants.userWordsID) as? [String]
         if let userWordsData = fetchedUserWordsData {
-            self.userWords += userWordsData
+            self.userWords = userWordsData
         }
         
         let fetchedUserDefinitionsData = UserDefaults.standard.value(forKey: Constants.userDefinitionsID) as? [String]
         if let userDefinitionsData = fetchedUserDefinitionsData {
-            self.userDefinitions += userDefinitionsData
+            self.userDefinitions = userDefinitionsData
         }
         
         self.words += userWords
@@ -130,8 +130,6 @@ class MainViewController: UIViewController {
         
         Service.getDefinitionAndSentence(of: word)
         Service.getImageURLString(of: word)
-        
-        userInputTF.text = ""
     }
     
     
@@ -142,7 +140,6 @@ class MainViewController: UIViewController {
     
     @IBAction private func nextWord(_ sender: Any) {
         if state == .ask {
-            state = .answering
             if definitions[index] == userInputTF.text {
                 if userWords.contains(word) {
                     let i = userWords.firstIndex(of: word)
@@ -157,14 +154,35 @@ class MainViewController: UIViewController {
                     UserDefaults.standard.removeObject(forKey: Constants.memorizedWordsID)
                     UserDefaults.standard.set(self.memorizedWords, forKey: Constants.memorizedWordsID)
                 }
-                retrieveData()
+                let ind = self.words.firstIndex(of: word)
+                self.words.remove(at: ind!)
+                self.definitions.remove(at: ind!)
+                    
+                if self.index != 0 {
+                    self.index -= 1
+                }
+                
+                if self.index != self.words.count {
+                    self.index -= 1
+                    updateData()
+                } else {
+                    wordAskLabel.text = "Finished all. Congrats!"
+                    nextButton.isEnabled = false
+                }
+                toggleState(hide: false)
             } else {
+                state = .answering
                 toggleState(hide: true)
             }
         } else {
             state = .ask
+            if self.index != self.words.count - 1 {
+                updateData()
+            } else {
+                wordAskLabel.text = "Finished all. Congrats!"
+                checkAmount()
+            }
             toggleState(hide: false)
-            checkAmount()
         }
         userInputTF.text = ""
         userInputTF.resignFirstResponder()
