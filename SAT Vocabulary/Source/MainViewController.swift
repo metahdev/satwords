@@ -15,6 +15,7 @@ enum State {
 class MainViewController: UIViewController {
     
     // MARK: - Properties
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var wordAskLabel: UILabel!
     @IBOutlet weak var userInputTF: UITextField!
@@ -23,6 +24,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var exampleLabel: UILabel!
     @IBOutlet weak var wordIV: UIImageView!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var wordsCountLabel: UILabel!
     
     var state: State = .ask
     var index = -1
@@ -125,8 +127,10 @@ class MainViewController: UIViewController {
         nameRevealLabel.text = definitions[index]
 
         wordIV.image = nil
-        definitionRevealLabel.text = ""
-        exampleLabel.text = ""
+        definitionRevealLabel.text = "Placeholder"
+        exampleLabel.text = "Placeholder"
+        
+        wordsCountLabel.text = "Words left: \(words.count)"
         
         Service.getDefinitionAndSentence(of: word)
         Service.getImageURLString(of: word)
@@ -208,15 +212,13 @@ class MainViewController: UIViewController {
     // MARK: - Notifications
     @objc private func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height 
-            }
+            self.scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height * 1.5, right: 0)
         }
     }
 
     @objc private func keyboardWillHide(notification: NSNotification) {
-        if self.view.frame.origin.y != 0 {
-            self.view.frame.origin.y = 0
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            self.scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: -(keyboardSize.height * 1.5), right: 0)
         }
     }
 }
